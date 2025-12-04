@@ -5,7 +5,8 @@ openai==1.58.1
 qdrant-client==1.12.1
 psycopg2-binary==2.9.10
 sqlalchemy==2.0.36
-pydantic==2.10.4
+pydantic[email]==2.10.4
+email-validator
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 python-multipart==0.0.20
