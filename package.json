@@ -1,7 +1,12 @@
 {
   "name": "physical-ai-robotics",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
+  "author": "Mirza Muhammad Ahmed (GIAIC ID: 00263838)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ahmed-KHI/physical-ai-robotics-textbook.git"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",

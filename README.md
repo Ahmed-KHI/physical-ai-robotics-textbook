@@ -129,4 +129,8 @@ npm run deploy
 
 ---
 
+**Author**: Mirza Muhammad Ahmed  
+**GIAIC ID**: 00263838  
+**GitHub**: [@Ahmed-KHI](https://github.com/Ahmed-KHI)  
+
 Built with ❤️ for GIAIC AI Hackathon | December 2025

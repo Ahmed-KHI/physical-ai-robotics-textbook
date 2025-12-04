@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-username.github.io',
+  url: 'https://Ahmed-KHI.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/physical-ai-robotics/',
+  baseUrl: '/physical-ai-robotics-textbook/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-username', // Your GitHub username
-  projectName: 'physical-ai-robotics', // Your repo name
+  organizationName: 'Ahmed-KHI', // Your GitHub username
+  projectName: 'physical-ai-robotics-textbook', // Your repo name
 
   onBrokenLinks: 'throw',
 
@@ -101,7 +101,7 @@ const config: Config = {
           label: 'Curriculum',
         },
         {
-          href: 'https://github.com/your-username/physical-ai-robotics',
+          href: 'https://github.com/Ahmed-KHI/physical-ai-robotics-textbook',
           label: 'GitHub',
           position: 'left',
         },
@@ -155,12 +155,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/your-username/physical-ai-robotics',
+              href: 'https://github.com/Ahmed-KHI/physical-ai-robotics-textbook',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Robotics Course. Built with ❤️ for Panaversity.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Mirza Muhammad Ahmed (GIAIC ID: 00263838). Built with ❤️ for GIAIC Hackathon.`,
     },
     prism: {
       theme: prismThemes.github,
