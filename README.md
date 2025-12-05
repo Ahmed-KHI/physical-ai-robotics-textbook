@@ -7,7 +7,7 @@ An AI-native interactive textbook for learning Physical AI and Humanoid Robotics
 **🔗 Live Site**: https://physical-ai-robotics-textbook.vercel.app  
 **🔐 Demo Account**: `teacher@giaic.com` / `teacher123`  
 **⚡ Performance**: Backend kept warm 24/7 for instant response (no cold starts)  
-**🎥 Demo Video**: [Coming Soon]
+**🎥 Demo Video**: [Watch 90-Second Demo](https://youtu.be/Ck3Vrv75zAQ)
 
 ## 🎯 Hackathon Project Features
 
@@ -198,10 +198,11 @@ Visit `http://localhost:3000`
 - [x] ✅ Comprehensive README
 - [x] ✅ All core features implemented
 - [x] ✅ All bonus features implemented
-- [ ] 🎥 Demo video (in progress)
-- [ ] 📝 Submission form completed
+- [x] ✅ Demo video uploaded to YouTube
+- [ ] 📝 Submission form - Ready to submit!
 
 **Total Points**: 300/300 (Core: 100 + Bonus: 200)  
+**Demo Video**: https://youtu.be/Ck3Vrv75zAQ  
 
 ## 📄 License
 
