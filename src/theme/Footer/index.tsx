@@ -35,7 +35,7 @@ const columns: FooterColumnData[] = [
 ];
 
 const socialLinks = [
-  {label: 'GitHub', href: 'https://github.com/your-username/physical-ai-robotics'},
+  {label: 'GitHub', href: 'https://github.com/Ahmed-KHI/physical-ai-robotics-textbook'},
   {label: 'Demo Video', href: '#'},
 ];
 
@@ -132,7 +132,7 @@ export default function Footer(): JSX.Element {
         <p>© {year} Physical AI & Robotics • GIAIC Hackathon 2025</p>
         <div className={styles.bottomLinks}>
           <Link to="/docs/intro">Documentation</Link>
-          <a href="https://github.com/your-username/physical-ai-robotics" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/Ahmed-KHI/physical-ai-robotics-textbook" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
     </footer>

@@ -4,6 +4,7 @@ Uses OpenAI for embeddings and chat, Qdrant for vector storage
 """
 
 from typing import List, Dict, Optional, Any
+from pydantic import SecretStr
 try:
     from langchain_openai import OpenAIEmbeddings, ChatOpenAI  # type: ignore
     from langchain_qdrant import QdrantVectorStore  # type: ignore
@@ -32,7 +33,7 @@ class RAGSystem:
         # Initialize OpenAI embeddings
         self.embeddings = OpenAIEmbeddings(
             model=os.getenv("EMBEDDING_MODEL", "text-embedding-3-large"),
-            api_key=self.openai_api_key
+            api_key=SecretStr(self.openai_api_key) if self.openai_api_key else None
         )
         
         # Initialize Qdrant client
@@ -48,7 +49,7 @@ class RAGSystem:
         self.llm = ChatOpenAI(
             model=os.getenv("CHAT_MODEL", "gpt-3.5-turbo"),
             temperature=0.7,
-            api_key=self.openai_api_key
+            api_key=SecretStr(self.openai_api_key) if self.openai_api_key else None
         )
         
         self.vector_store = None
@@ -165,7 +166,7 @@ class RAGSystem:
         
         qa_chain = ConversationalRetrievalChain.from_llm(
             llm=self.llm,  # type: ignore
-            retriever=retriever,
+            retriever=retriever,  # type: ignore
             memory=memory,
             return_source_documents=True
         )

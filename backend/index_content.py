@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 from typing import List, Dict
 import re
+from pydantic import SecretStr
 
 try:
     from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -31,10 +32,12 @@ class ContentIndexer:
     ):
         """Initialize the content indexer"""
         self.collection_name = collection_name
+        self.qdrant_url = qdrant_url
+        self.qdrant_api_key = qdrant_api_key
         
         # Initialize OpenAI embeddings
         self.embeddings = OpenAIEmbeddings(
-            api_key=openai_api_key,
+            api_key=SecretStr(openai_api_key),
             model="text-embedding-3-large"
         )
         
@@ -189,8 +192,8 @@ class ContentIndexer:
                 texts=all_texts,
                 embedding=self.embeddings,
                 metadatas=all_metadatas,
-                url=self.qdrant_client._client._host,
-                api_key=self.qdrant_client._client._api_key,
+                url=self.qdrant_url,
+                api_key=self.qdrant_api_key,
                 collection_name=self.collection_name,
                 force_recreate=False
             )
@@ -207,7 +210,7 @@ class ContentIndexer:
             collection_info = self.qdrant_client.get_collection(self.collection_name)
             point_count = collection_info.points_count
             print(f"\n✓ Verification: {point_count} points in collection")
-            return point_count > 0
+            return point_count is not None and point_count > 0
         
         except Exception as e:
             print(f"✗ Verification failed: {e}")
@@ -234,6 +237,11 @@ def main():
         print("Required: OPENAI_API_KEY, QDRANT_URL, QDRANT_API_KEY")
         print("\nPlease create backend/.env with these values.")
         sys.exit(1)
+    
+    # Type assertions after validation
+    assert openai_api_key is not None
+    assert qdrant_url is not None
+    assert qdrant_api_key is not None
     
     # Initialize indexer
     indexer = ContentIndexer(
