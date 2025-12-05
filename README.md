@@ -5,7 +5,7 @@ An AI-native interactive textbook for learning Physical AI and Humanoid Robotics
 ## 🌐 Live Demo
 
 **🔗 Live Site**: https://physical-ai-robotics-textbook.vercel.app  
-**🔐 Demo Account**: `teacher@giaic.com` / `teacher123`  
+**🔐 Demo Account**: `teacher@giaic.com` / `Teacher@123`  
 **⚡ Performance**: Backend kept warm 24/7 for instant response (no cold starts)  
 **🎥 Demo Video**: [Watch 90-Second Demo](https://youtu.be/Ck3Vrv75zAQ)
 
